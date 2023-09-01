@@ -53,3 +53,12 @@ dat %>%
   count(species,specimen) %>%
   print() %>%
   count(species,name = "n.specimens")
+
+for(i in 1:10) print(i)
+
+for(i in species){
+  p <- dat %>%
+    filter(species==i)%>%
+    ggplot()+geom_boxplot(aes(x=quadrant,y=N))+ggtitle(i)
+  print(p)
+}
