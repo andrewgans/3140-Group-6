@@ -63,7 +63,7 @@ for(i in species){
   print(p)
 }
 
-pdf("species_quadrant.pdf")
+pdf("Alexandra_Hoogendijk_species_quandrant.pdf")
 for(i in species){
   p <- dat %>%
     filter(species==i)%>%
