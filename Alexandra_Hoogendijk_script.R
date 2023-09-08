@@ -67,6 +67,7 @@ for(i in species){
   print(p)
 }
 
+#Code that produces a PDF file containing 6 figures, one for each species that includes a boxplot of puncture force verus quadrant.
 pdf("Alexandra_Hoogendijk_species_quandrant.pdf")
 for(i in species){
   p <- dat %>%
