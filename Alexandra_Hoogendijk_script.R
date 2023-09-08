@@ -49,6 +49,7 @@ dat %>%
   group_by(species) %>%
   summarise(n = n())
 
+#Code that produces a summary of the number of specimens sampled for each species.
 species.n<- dat %>%
   group_by(species) %>%
   summarise(n = n())
