@@ -3,31 +3,29 @@
 library(ggplot2)
 library(tidyverse)
 #working directory already set manually
-##Question 1- Load dat variable with scales dataset##
 #load dataset
 dat <- read.csv("scales.csv")
-
-##Question 2 - Report Class of Each Column##
+#Dataf summary
+dim(dat)
+head(dat)
 #Data classes + operations
 sapply(dat,class)
-
-##Question 3 - Dimensions of Dataset##
-dim(dat)
-
-##Question 4 - Number of Punctures for each Species##
+#Constructing summary dataframe for species count in dataset
+dat$species <- as.factor(dat$species)
+species <- levels(dat$species)
+species
+length(species)
+##Number of Punctures for each Species
 species.n <- dat %>%
   group_by(species) %>%
   summarise(n = n())
 species.n
-
-##Question 5 - Number of Specimens Sampled For Each Species##
+##Number of Specimens Sampled For Each Species
 dat %>% 
   count(species,specimen) %>%
   print() %>%
   count(species,name = "n.specimens")
-
-##Question 6 - Compile PDF File with plots 
-#Compile PDF
+##Compile PDF
 for(i in species){
   p <- dat %>%
     filter(species==i)%>%
@@ -43,3 +41,4 @@ for(i in species){
 }
 dev.off()
 list.files(pattern = ".pdf")
+##End##
