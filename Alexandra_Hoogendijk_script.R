@@ -34,6 +34,7 @@ dat$species==species[1]
 
 dat$species[dat$species==species[1]]
 
+#Code that produces a summary of the number of scales punctured for each species.
 A.rup<-length(dat$species[dat$species==species[1]])
 L.gib<-length(dat$species[dat$species==species[2]])
 L.mac<-length(dat$species[dat$species==species[3]])
