@@ -1,12 +1,16 @@
 library(ggplot2)
+#set directory session - set working directory - choose directory - Module 1 Project EMOB
 library(tidyverse)
 
+#A dat variable containing the scales dataset.
 dat <- read.csv("scales.csv")
 
 dim(dat)
 
+#A line of code which reports the dimensions of the dataset.
 head(dat)
 
+#A line of code which reports the class of each column in the dataset.
 class(dat$N)
 class(dat$quadrant)
 class(dat$species)
@@ -30,6 +34,7 @@ dat$species==species[1]
 
 dat$species[dat$species==species[1]]
 
+#Code that produces a summary of the number of scales punctured for each species.
 A.rup<-length(dat$species[dat$species==species[1]])
 L.gib<-length(dat$species[dat$species==species[2]])
 L.mac<-length(dat$species[dat$species==species[3]])
@@ -44,6 +49,7 @@ dat %>%
   group_by(species) %>%
   summarise(n = n())
 
+#Code that produces a summary of the number of specimens sampled for each species.
 species.n<- dat %>%
   group_by(species) %>%
   summarise(n = n())
@@ -63,6 +69,7 @@ for(i in species){
   print(p)
 }
 
+#Code that produces a PDF file containing 6 figures, one for each species that includes a boxplot of puncture force verus quadrant.
 pdf("Alexandra_Hoogendijk_species_quandrant.pdf")
 for(i in species){
   p <- dat %>%
@@ -71,5 +78,5 @@ for(i in species){
   print(p)
 }
 dev.off()
- 
+
 list.files(pattern=".pdf")
