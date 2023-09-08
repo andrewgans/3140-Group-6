@@ -1,12 +1,16 @@
 library(ggplot2)
+#set directory session - set working directory - choose directory - Module 1 Project EMOB
 library(tidyverse)
 
+#A dat variable containing the scales dataset.
 dat <- read.csv("scales.csv")
 
 dim(dat)
 
+#A line of code which reports the dimensions of the dataset.
 head(dat)
 
+#A line of code which reports the class of each column in the dataset.
 class(dat$N)
 class(dat$quadrant)
 class(dat$species)
@@ -71,5 +75,5 @@ for(i in species){
   print(p)
 }
 dev.off()
- 
+
 list.files(pattern=".pdf")
