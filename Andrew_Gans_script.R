@@ -5,7 +5,7 @@ library(tidyverse)
 #working directory already set manually
 #load dataset
 dat <- read.csv("scales.csv")
-#Dataf summary
+#Data summary
 dim(dat)
 head(dat)
 #Data classes + operations
