@@ -5,7 +5,7 @@ library(tidyverse)
 #working directory already set manually
 #load dataset
 dat <- read.csv("scales.csv")
-#Data summary
+#Dataf summary
 dim(dat)
 head(dat)
 #Data classes + operations
@@ -15,23 +15,12 @@ dat$species <- as.factor(dat$species)
 species <- levels(dat$species)
 species
 length(species)
-dat$species == species[1]
-dat$species[dat$species == species[1]]
-A.rup <- length(dat$species[dat$species == species[1]])
-L.gib <- length(dat$species[dat$species == species[2]])
-L.mac <- length(dat$species[dat$species == species[3]])
-M.sal <- length(dat$species[dat$species == species[4]])
-M.sax <- length(dat$species[dat$species == species[5]])
-P.fla <- length(dat$species[dat$species == species[6]])
-species.obs <- data.frame(sp=species,n=c(A.rup,L.gib,L.mac,M.sal,M.sax,P.fla))
-species.obs
-dat %>%
-  group_by(species) %>%
-  summarise(n = n())
+##Number of Punctures for each Species
 species.n <- dat %>%
   group_by(species) %>%
   summarise(n = n())
 species.n
+##Number of Specimens Sampled For Each Species
 dat %>% 
   count(species,specimen) %>%
   print() %>%
@@ -43,7 +32,7 @@ for(i in species){
     ggplot()+geom_boxplot(aes(x=quadrant,y=N))+ggtitle(i)
   print(p)
 }
-pdf("species_quadrant.pdf")
+pdf("Andrew_Gans_species_quadrant_test.pdf")
 for(i in species){
   p <- dat %>%
     filter(species==i) %>%
