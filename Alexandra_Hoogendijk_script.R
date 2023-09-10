@@ -5,13 +5,13 @@ library(ggplot2)
 library(tidyverse)
 #set directory session - set working directory - choose directory - Module 1 Project EMOB
 
-#A dat variable containing the scales dataset.
+#Question 1: A dat variable containing the scales dataset.
 dat <- read.csv("scales.csv")
 
-#A line of code which reports the dimensions of the dataset.
+#Question 3: A line of code which reports the dimensions of the dataset.
 dim(dat)
 
-#A line of code which reports the class of each column in the dataset.
+#Question 2: A line of code which reports the class of each column in the dataset.
 sapply(dat,class)
 
 #Code that produces a summary of the number of scales punctured for each species.
