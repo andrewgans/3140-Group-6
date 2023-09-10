@@ -1,5 +1,6 @@
 #Module 1 Project
 
+#to begin you must load packages
 library(ggplot2)
 #set directory session - set working directory - choose directory - Module 1 Project EMOB
 library(tidyverse)
