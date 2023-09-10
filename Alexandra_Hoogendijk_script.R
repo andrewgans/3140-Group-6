@@ -25,6 +25,7 @@ P.fla<-length(dat$species[dat$species==species[6]])
 species.obs <- data.frame(sp=species,n=c(A.rup,L.gib,L.mac,M.sal,M.sax,P.fla))
 species.obs
 
+#Code that produces a summary of the number of scales punctured for each species.
 dat %>%
   group_by(species) %>%
   summarise(n = n())
