@@ -5,9 +5,9 @@ library(tidyverse)
 #A dat variable containing the scales dataset.
 dat <- read.csv("scales.csv")
 
+#A line of code which reports the dimensions of the dataset.
 dim(dat)
 
-#A line of code which reports the dimensions of the dataset.
 head(dat)
 
 #A line of code which reports the class of each column in the dataset.
