@@ -25,6 +25,7 @@ species.n<- dat %>%
   summarise(n = n())
 species.n
 
+#Code that produces a summary of the number of scales punctured for each species.
 dat %>% 
   count(species,specimen) %>%
   print() %>%
