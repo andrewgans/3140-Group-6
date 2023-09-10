@@ -11,7 +11,6 @@ dat <- read.csv("scales.csv")
 #A line of code which reports the dimensions of the dataset.
 dim(dat)
 
-#A line of code which reports the class of each column in the dataset.
 class(dat$N)
 class(dat$quadrant)
 class(dat$species)
@@ -23,6 +22,7 @@ class(dat[,4])
 
 mean(dat$N)
 
+#A line of code which reports the class of each column in the dataset.
 sapply(dat,class)
 
 dat$species <- as.factor(dat$species)
