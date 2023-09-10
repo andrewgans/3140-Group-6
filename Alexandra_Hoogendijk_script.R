@@ -15,16 +15,12 @@ dim(dat)
 sapply(dat,class)
 
 # Question 4: Code that produces a summary of the number of scales punctured for each species.
-dat %>%
-  group_by(species) %>%
-  summarise(n = n())
-
-#Code that produces a summary of the number of specimens sampled for each species.
 species.n<- dat %>%
   group_by(species) %>%
   summarise(n = n())
 species.n
 
+#Question 5: Code that produces a summary of the number of specimens sampled for each species.
 dat %>% 
   count(species,specimen) %>%
   print() %>%
