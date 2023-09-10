@@ -8,8 +8,6 @@ dat <- read.csv("scales.csv")
 #A line of code which reports the dimensions of the dataset.
 dim(dat)
 
-head(dat)
-
 #A line of code which reports the class of each column in the dataset.
 class(dat$N)
 class(dat$quadrant)
