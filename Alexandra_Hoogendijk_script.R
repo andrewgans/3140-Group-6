@@ -26,7 +26,7 @@ dat %>%
   print() %>%
   count(species,name = "n.specimens")
 
-##Code that produces a PDF file containing 6 figures, one for each species that includes a boxplot of puncture force verus quadrant.
+# Question 6: Code that produces a PDF file containing 6 figures, one for each species that includes a boxplot of puncture force verus quadrant.
 pdf("Alexandra_Hoogendijk_species_quandrant.pdf")
 for(i in species){
   p <- dat %>%
