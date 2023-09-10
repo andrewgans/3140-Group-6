@@ -14,7 +14,7 @@ dim(dat)
 #Question 2: A line of code which reports the class of each column in the dataset.
 sapply(dat,class)
 
-#Code that produces a summary of the number of scales punctured for each species.
+# Question 4: Code that produces a summary of the number of scales punctured for each species.
 dat %>%
   group_by(species) %>%
   summarise(n = n())
