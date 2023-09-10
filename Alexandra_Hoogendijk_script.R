@@ -31,7 +31,6 @@ dat %>%
   print() %>%
   count(species,name = "n.specimens")
 
-for(i in 1:10) print(i)
 ##Code that produces a PDF file containing 6 figures, one for each species that includes a boxplot of puncture force verus quadrant.
 for(i in species){
   p <- dat %>%
