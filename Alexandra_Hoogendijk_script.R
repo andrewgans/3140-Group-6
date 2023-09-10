@@ -34,6 +34,3 @@ for(i in species){
     ggplot()+geom_boxplot(aes(x=quadrant,y=N))+ggtitle(i)
   print(p)
 }
-dev.off()
-
-list.files(pattern=".pdf")
